@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lenora1128-dotcom.github.io/tayder/sitemap.xml
