@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>練團室｜泰德樂器 TAYDER MUSIC</title>
+<meta name="description" content="用影片和現場實拍，先感受一下泰德小練團室裡開練的感覺。美麗島站 2 號出口，線上就能預約時段。">
+<meta property="og:title" content="走進練團室｜泰德樂器 TAYDER MUSIC">
+<meta property="og:image" content="media/jam-poster.jpg">
+<link rel="icon" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Noto+Sans+TC:wght@400;500;700;900&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+<style>
+body{background:#0E1A22;color:#F7F3EE}
+.hd .nv{background:rgba(14,26,34,.78);border-color:rgba(255,255,255,.1)}
+.nv a.navlink,.nv-logo{color:#F7F3EE}
+.nv a.navlink:hover{background:rgba(255,255,255,.08)}
+.nv a.navlink[aria-current="page"]{background:rgba(240,122,46,.18);color:#FFB07A}
+.nv-tg{background:rgba(255,255,255,.1)}.nv-tg span{background:#F7F3EE}
+@media (max-width:1000px){.nv{background:#0E1A22}.nv-m{background:#0E1A22}}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box}
+.cap{font-size:13px;line-height:16px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#FF9A4D;margin:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:12px 18px;border-radius:12px;font-size:16px;line-height:24px;font-weight:600;text-decoration:none;box-sizing:border-box;border:0;cursor:pointer;font-family:inherit;transition:transform .5s var(--ease),background-color .3s var(--ease)}
+.btn:active{transform:scale(.98)}
+.btn-p{background:linear-gradient(135deg,#FF9A4D,#F07A2E);color:#17303D;font-weight:800;box-shadow:0 8px 24px rgba(240,122,46,.35)}.btn-p:hover{background:linear-gradient(135deg,#FFAA66,#F48C47)}
+.btn-g{background:rgba(255,255,255,.1);color:#F7F3EE;border:1px solid rgba(255,255,255,.22);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}.btn-g:hover{background:rgba(255,255,255,.18)}
+.btn[aria-pressed="true"]{background:#F7F3EE;color:#17303D}
+/* hero */
+.hero{position:relative;min-height:100svh;min-height:100vh;margin-top:-72px;display:flex;align-items:flex-end;overflow:hidden;isolation:isolate}
+.hero video,.hero img.poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.hero:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(14,26,34,.55) 0%,rgba(14,26,34,.05) 35%,rgba(14,26,34,.25) 60%,rgba(14,26,34,.96) 100%),radial-gradient(120% 80% at 50% 50%,transparent 50%,rgba(0,0,0,.45) 100%)}
+.hero-in{width:100%;padding:120px 0 56px}
+.hero h1{font-size:72px;line-height:1.05;font-weight:900;margin:14px 0 18px;letter-spacing:-.02em;text-wrap:balance;max-width:760px;background:linear-gradient(100deg,#FFFFFF 0%,#FFD9B8 45%,#FF9A4D 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 4px 24px rgba(0,0,0,.45))}
+.hero h1 em{font-style:normal;background:linear-gradient(100deg,#FFB07A,#F07A2E);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{font-size:19px;line-height:30px;max-width:560px;margin:0 0 28px;color:rgba(247,243,238,.86)}
+.acts{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.live{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:rgba(14,26,34,.55);border:1px solid rgba(255,255,255,.18);padding:8px 14px 8px 12px;border-radius:999px;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.live i{width:8px;height:8px;border-radius:50%;background:#F07A2E;box-shadow:0 0 0 0 rgba(240,122,46,.6);animation:pulse 1.6s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(240,122,46,0)}100%{box-shadow:0 0 0 0 rgba(240,122,46,0)}}
+.vu{display:flex;align-items:flex-end;gap:3px;height:22px;margin-left:4px}
+.vu b{width:4px;background:#F07A2E;border-radius:2px;height:30%;transform-origin:bottom;animation:vu 0.9s ease-in-out infinite alternate}
+.vu b:nth-child(2){animation-delay:-.3s;height:60%}.vu b:nth-child(3){animation-delay:-.6s;height:45%}.vu b:nth-child(4){animation-delay:-.15s;height:80%}.vu b:nth-child(5){animation-delay:-.45s;height:35%}
+@keyframes vu{to{transform:scaleY(.35)}}
+.vu.off b{animation:none;transform:scaleY(.25);background:rgba(247,243,238,.4)}
+.scroll{position:absolute;right:24px;bottom:24px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:rgba(247,243,238,.6);writing-mode:vertical-rl}
+/* sections */
+section.s{padding:96px 0}
+.h2{font-size:44px;line-height:1.12;font-weight:900;margin:10px 0 14px;letter-spacing:-.02em;text-wrap:balance;color:#fff}
+.h2 span{color:#FF9A4D}
+.sub{font-size:17px;line-height:28px;color:rgba(247,243,238,.72);max-width:620px;margin:0 0 36px}
+.shots{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.shot{position:relative;border-radius:20px;overflow:hidden;background:#000;aspect-ratio:3/4;border:1px solid rgba(255,255,255,.08)}
+.shot img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 8s var(--ease)}
+.shot:hover img{transform:scale(1.04)}
+.hs{position:absolute;width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;border:0;background:rgba(247,243,238,.92);color:#17303D;font:700 15px/1 Manrope,sans-serif;cursor:pointer;box-shadow:0 0 0 6px rgba(240,122,46,.35);padding:0}
+.hs:focus-visible{outline:3px solid #fff}
+.hs[aria-expanded="true"]{background:var(--orange)}
+.tip{position:absolute;width:max-content;max-width:min(240px,calc(100vw - 32px));background:rgba(14,26,34,.95);color:#F7F3EE;border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:10px 12px;font-size:14px;line-height:20px;transform:translate(-50%,12px);pointer-events:none}
+.tip b{display:block;color:#FFB07A}
+.tip[hidden]{display:none}
+.legend{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:16px;font-size:14px;color:rgba(247,243,238,.75)}
+.legend span b{display:inline-flex;width:20px;height:20px;border-radius:50%;background:rgba(247,243,238,.92);color:#17303D;font-size:12px;align-items:center;justify-content:center;margin-right:6px}
+/* feel */
+.feel{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:24px}
+.card h3{margin:0 0 6px;font-size:22px;line-height:30px;font-weight:800;color:#fff}
+.card p{margin:0;font-size:15px;line-height:24px;color:rgba(247,243,238,.75)}
+.card .n{font-size:28px;font-weight:900;color:#F07A2E;letter-spacing:0;line-height:1;display:block;margin-bottom:10px}
+/* price */
+.rooms{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.room{background:#F7F3EE;color:#1A2E3B;border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:8px}
+.room .pr{font-size:40px;line-height:44px;font-weight:700}.room .pr small{font-size:16px;font-weight:500;color:#4A5A65}
+.room ul{margin:4px 0 0;padding-left:18px;font-size:15px;line-height:24px;color:#4A5A65}
+.cta-band{background:linear-gradient(135deg,#F07A2E,#D66626);color:#17303D;border-radius:24px;padding:48px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.cta-band h2{margin:0 0 6px;font-size:34px;line-height:1.15;font-weight:900}
+.cta-band p{margin:0;font-size:16px;color:rgba(23,48,61,.8)}
+.cta-band .btn-p{background:#17303D;color:#fff}.cta-band .btn-p:hover{background:#1F3644}
+footer{padding:40px 0 48px;font-size:13px;color:rgba(247,243,238,.55);border-top:1px solid rgba(255,255,255,.08)}
+footer a{color:rgba(247,243,238,.8)}
+@media (max-width:860px){
+  .wrap{padding:0 18px}
+  .hero{min-height:88svh;min-height:88vh}
+  .hero h1{font-size:46px;line-height:1.08}.hero-in{padding:104px 0 96px}.hero p.lead{font-size:16px;line-height:26px;margin-bottom:20px}
+  .acts{gap:10px}.acts .btn{flex:1 1 calc(50% - 5px);min-height:52px;font-size:16px}.acts .btn:first-child{flex-basis:100%}
+  .live{font-size:12px;padding:7px 12px 7px 10px}
+  .shots,.rooms{grid-template-columns:1fr;gap:14px}.feel{grid-template-columns:1fr;gap:12px}
+  .shot{aspect-ratio:4/5}.hs{width:34px;height:34px;margin:-17px 0 0 -17px;font-size:16px}
+  .card{padding:20px}
+  .h2{font-size:32px}section.s{padding:56px 0}.scroll{display:none}.cta-band{padding:28px 20px;border-radius:20px}
+  .cta-band h2{font-size:26px}.cta-band .acts{width:100%}
+  main{padding-bottom:84px}
+  .sticky{position:fixed;left:0;right:0;bottom:0;z-index:14;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(14,26,34,.92);border-top:1px solid rgba(255,255,255,.1);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);transform:translateY(110%);transition:transform .4s var(--ease)}
+  .sticky.on{transform:none}
+  .sticky .btn{flex:1;min-height:50px;font-size:16px}
+  .sticky .btn-g{flex:0 0 auto;padding:0 16px}
+  .gaga{bottom:calc(84px + env(safe-area-inset-bottom))!important}
+}
+@media (min-width:861px){.sticky{display:none}}
+@media (prefers-reduced-motion:reduce){.live i,.vu b{animation:none}.shot img{transition:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要內容</a>
+<header class="hd"><nav class="nv" aria-label="主選單"><a class="nv-logo" href="index.html"><img src="img/logo.png" alt="TAYDER MUSIC 泰德樂器" width="44" height="40"><span>泰德樂器</span></a><button type="button" class="nv-tg" aria-expanded="false" aria-controls="nv-m" aria-label="開啟選單"><span></span><span></span></button><div class="nv-m" id="nv-m"><a class="navlink" href="guitars.html">吉他與品牌</a><a class="navlink" href="learn.html">學習諮詢</a><a class="navlink" href="rooms.html" aria-current="page">練團室</a><a class="navlink" href="index.html#services">維修與出租</a><a class="navlink" href="index.html#visit">門市資訊</a><a class="navlink" href="index.html#social">社群</a><a class="navlink lang" href="en.html" lang="en">English</a><a class="cta" href="booking.html">線上預約</a></div></nav></header>
+
+<main id="main">
+<section class="hero" aria-label="練團室現場影片">
+  <video id="v" autoplay muted loop playsinline preload="metadata" poster="media/jam-poster.jpg" aria-hidden="true">
+    <source src="media/jam-loop-sm.mp4" type="video/mp4" media="(max-width:640px)">
+    <source src="media/jam-loop.mp4" type="video/mp4">
+  </video>
+  <div class="wrap hero-in">
+    <p class="live"><i></i>小練團室現場・美麗島站 2 號出口 <span class="vu off" id="vu" aria-hidden="true"><b></b><b></b><b></b><b></b><b></b></span></p>
+    <h1>先聽一下，<br>再決定<em>要不要來</em>。</h1>
+    <p class="lead">這是客人在泰德小練團室實際開練的畫面。打開聲音、戴上耳機，大概就是站在門口的感覺。美麗島站 2 號出口，線上就能看哪個時段有空。</p>
+    <div class="acts">
+      <button type="button" class="btn btn-g" id="snd" aria-pressed="false">🔇 打開聲音</button>
+      <a class="btn btn-p" href="booking.html">線上預約時段</a>
+      <a class="btn btn-g" href="#rooms">看兩間練團室</a>
+    </div>
+  </div>
+  <span class="scroll" aria-hidden="true">往下看現場</span>
+</section>
+
+<section class="s"><div class="wrap">
+  <p class="cap">Inside the room</p>
+  <h2 class="h2">站在房間裡，<span>看得到的東西</span></h2>
+  <p class="sub">點照片上的圓點，看看房間裡有什麼。照片是小練團室實拍，沒有修圖。</p>
+  <div class="shots">
+    <figure class="shot" style="margin:0">
+      <img src="media/room-1.jpg" alt="小練團室實拍：兩位吉他手站在譜架前，後方是鼓手與鼓組，紅色隔音簾，右側音箱" width="1050" height="1400">
+      <button class="hs" style="left:58%;top:52%" aria-expanded="false" data-tip="鼓組|鼓手位置在房間最裡面，面向大家。">1</button>
+      <button class="hs" style="left:33%;top:49%" aria-expanded="false" data-tip="主唱麥克風|麥克風架和譜架都在，拿譜來就能唱。">2</button>
+      <button class="hs" style="left:88%;top:73%" aria-expanded="false" data-tip="音箱|房間右側的吉他音箱，插上就能彈。">3</button>
+      <button class="hs" style="left:52%;top:40%" aria-expanded="false" data-tip="吸音棉與隔音簾|牆面吸音棉加紅色厚簾，房間裡的聲音比較不會太衝。">4</button>
+    </figure>
+    <figure class="shot" style="margin:0">
+      <img src="media/room-2.jpg" alt="小練團室實拍：從另一個角度看兩位吉他手、譜架與後方鼓組" width="1050" height="1400">
+      <button class="hs" style="left:46%;top:60%" aria-expanded="false" data-tip="譜架|兩支譜架，手機或樂譜都放得下。">5</button>
+      <button class="hs" style="left:24%;top:56%" aria-expanded="false" data-tip="吉他手位置|站著彈、坐著彈都有空間，大家看得到彼此。">6</button>
+      <button class="hs" style="left:16%;top:74%" aria-expanded="false" data-tip="器材放哪|效果器、琴袋放地上就好，走道還是夠寬。">7</button>
+    </figure>
+  </div>
+  <div class="tip" id="tip" hidden role="tooltip"></div>
+  <p class="legend"><span><b>1</b>鼓組</span><span><b>2</b>麥克風</span><span><b>3</b>音箱</span><span><b>4</b>吸音</span><span><b>5</b>譜架</span><span><b>6</b>站位</span><span><b>7</b>器材放置</span></p>
+</div></section>
+
+<section class="s" style="padding-top:0"><div class="wrap">
+  <p class="cap">What it feels like</p>
+  <h2 class="h2">來練團的人，<span>通常是這樣</span></h2>
+  <div class="feel">
+    <div class="card"><span class="n">01</span><h3>插上就開始</h3><p>鼓組、音箱、麥克風、譜架都在房間裡，帶自己的琴和效果器來就好。</p></div>
+    <div class="card"><span class="n">02</span><h3>音量可以開到該有的大小</h3><p>牆面有吸音棉和厚簾，練團的音量在房間裡不會太刺。</p></div>
+    <div class="card"><span class="n">03</span><h3>練團室就在樂器行裡</h3><p>弦斷了、想換 pick、想順便試一把琴，走出來就有人幫你。</p></div>
+  </div>
+</div></section>
+
+<section class="s" id="rooms" style="padding-top:0"><div class="wrap">
+  <p class="cap">Rooms &amp; pricing</p>
+  <h2 class="h2">兩間練團室，<span>依人數選</span></h2>
+  <div class="rooms">
+    <div class="room" style="padding:0;overflow:hidden;outline:2px solid #F07A2E"><img src="img/room-small.jpg" alt="小練團室" loading="lazy" style="width:100%;height:200px;object-fit:cover"><div style="padding:22px 24px;display:flex;flex-direction:column;gap:8px"><p class="cap" style="color:#B4521A">Small room・影片與照片就是這間</p><strong style="font-size:24px">小練團室</strong><div class="pr">250 <small>元／小時</small></div><ul><li>爵士鼓、音箱、譜架</li><li>適合個人或 2–3 人</li><li>6 人以內不加價</li></ul></div></div>
+    <div class="room" style="padding:0;overflow:hidden"><img src="img/room-large.jpg" alt="大練團室" loading="lazy" style="width:100%;height:200px;object-fit:cover"><div style="padding:22px 24px;display:flex;flex-direction:column;gap:8px"><p class="cap" style="color:#B4521A">Large room</p><strong style="font-size:24px">大練團室</strong><div class="pr">350 <small>元／小時</small></div><ul><li>舞台區、爵士鼓、PA 喇叭</li><li>空間寬敞，適合整團排練</li><li>6 人以內不加價，第 7 人起每人 +50 元</li></ul></div></div>
+  </div>
+  </div>
+  <p style="font-size:14px;line-height:22px;color:rgba(247,243,238,.6);margin:16px 0 0">租借鍵盤 KB 每次 +100 元。實際可預約時段與設備以預約頁與店員說明為準。</p>
+</div></section>
+
+<section class="s" style="padding-top:0"><div class="wrap">
+  <div class="cta-band">
+    <div><h2>想自己站進去感受一次？</h2><p>線上先看哪個時段有空，預約送出後由店員確認。</p></div>
+    <div class="acts"><a class="btn btn-p" href="booking.html">線上預約時段</a><a class="btn btn-g" href="index.html#visit" style="color:#17303D;border-color:rgba(23,48,61,.3)">門市資訊</a></div>
+  </div>
+</div></section>
+</main>
+<div class="sticky" id="sticky" aria-label="快速預約"><a class="btn btn-p" href="booking.html">線上預約時段</a><button type="button" class="btn btn-g" id="snd2" aria-label="聲音開關">🔇</button></div>
+
+<footer><div class="wrap">泰德樂器 TAYDER MUSIC・高雄市新興區中山一路 83 號・<a href="tel:072411327">07-241-1327</a>・<a href="privacy.html">隱私權政策</a></div></footer>
+
+<script src="site.js"></script>
+<script>
+(function(){
+  var v=document.getElementById('v'),b=document.getElementById('snd'),vu=document.getElementById('vu');
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var st=document.getElementById('sticky'),hero=document.querySelector('.hero');
+  if('IntersectionObserver' in window){new IntersectionObserver(function(es){st.classList.toggle('on',!es[0].isIntersecting);},{threshold:0.15}).observe(hero);}
+  var b2=document.getElementById('snd2');b2.addEventListener('click',function(){b.click();});
+  if(reduce){v.removeAttribute('autoplay');v.pause();}
+  b.addEventListener('click',function(){
+    var on=v.muted;v.muted=!on;b.setAttribute('aria-pressed',on?'true':'false');
+    b.textContent=on?'🔊 關閉聲音':'🔇 打開聲音';b2.textContent=on?'🔊':'🔇';vu.classList.toggle('off',!on);
+    if(on){v.volume=0.9;var p=v.play();if(p&&p.catch)p.catch(function(){});}
+  });
+  // 熱點
+  var tip=document.getElementById('tip'),open=null;
+  document.querySelectorAll('.hs').forEach(function(h){
+    h.addEventListener('click',function(e){
+      e.stopPropagation();
+      if(open===h){close();return;}
+      if(open)open.setAttribute('aria-expanded','false');
+      open=h;h.setAttribute('aria-expanded','true');
+      var t=h.dataset.tip.split('|');tip.innerHTML='<b></b><span></span>';tip.querySelector('b').textContent=t[0];tip.querySelector('span').textContent=t[1];
+      var r=h.getBoundingClientRect(),w=h.closest('.wrap').getBoundingClientRect();
+      tip.hidden=false;tip.style.transform='none';tip.style.left='0px';tip.style.top=(r.bottom-w.top+12)+'px';
+      var tw=tip.getBoundingClientRect().width;var x=r.left+r.width/2-w.left-tw/2;var minX=12-w.left,maxX=window.innerWidth-12-tw-w.left;x=Math.max(minX,Math.min(maxX,x));tip.style.left=x+'px';
+    });
+  });
+  function close(){if(open)open.setAttribute('aria-expanded','false');open=null;tip.hidden=true;}
+  document.addEventListener('click',close);document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+  window.addEventListener('resize',close);
+  var sec=document.querySelector('.shots').closest('.wrap');sec.style.position='relative';
+})();
+</script>
+<script src="gaga-widget.js" defer></script>
+</body>
+</html>

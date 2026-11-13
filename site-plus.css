@@ -1,0 +1,108 @@
+/* TAYDER MUSIC 視覺加強（2026-11-13）：更粗更有力的標題、橘色重點、更大更醒目的按鈕、手機優先調整。
+   疊在 site.css 之後；只覆寫樣式，不改任何頁面內容。 */
+:root{--grad:linear-gradient(135deg,#FF9A4D,#F07A2E);--hl:#D9661F}
+
+/* 標題：粗體、深藍灰→黑的漸層，手機版不再小字 */
+.h1,.h2,.h3,h1.h2{font-weight:900!important;letter-spacing:-.02em!important;background:linear-gradient(100deg,#0E1A22,#1F3644 70%,#3A4C58)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important;text-wrap:balance}
+.h1{font-size:60px!important;line-height:1.08!important}
+.h2,h1.h2{font-size:52px!important;line-height:1.1!important}
+.h3{font-size:40px!important;line-height:1.15!important}
+.h1 .hl,.h2 .hl,.h3 .hl,h1.h2 .hl{background:var(--grad)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important}
+.h5{font-weight:800!important}
+.cap{font-weight:800!important;letter-spacing:.12em!important;font-size:13px!important;color:var(--hl)!important}
+.tagline{font-weight:900!important}
+.tagline span.lit{color:#FFB07A!important}
+.price{font-weight:900!important;color:var(--hl)!important}
+
+/* 按鈕：主按鈕橘色漸層＋陰影，所有按鈕更高更好按 */
+.btn{min-height:52px!important;font-weight:700!important;border-radius:14px!important}
+.btn-p,.nv .cta{background:var(--grad)!important;color:#17303D!important;font-weight:800!important;box-shadow:0 8px 22px rgba(240,122,46,.32)!important}
+.btn-p:hover,.nv .cta:hover{background:linear-gradient(135deg,#FFAA66,#F48C47)!important;box-shadow:0 10px 26px rgba(240,122,46,.4)!important}
+.btn-s{border-width:2px!important;border-color:#1A2E3B!important;font-weight:700!important}
+.chip{font-weight:600!important;border-color:#F3D3BD!important;background:#FDF3EC!important}
+
+/* 卡片 hover 與圓角稍大 */
+.card,.room{border-radius:20px!important}
+
+/* 手機 */
+@media (max-width:640px){
+  .wrap{padding-left:18px!important;padding-right:18px!important}
+  .h1{font-size:44px!important;line-height:1.1!important}
+  .h2,h1.h2{font-size:36px!important;line-height:1.12!important}
+  .h3{font-size:32px!important;line-height:1.15!important}
+  .tagline{font-size:40px!important;line-height:48px!important}
+  .price{font-size:40px!important;line-height:46px!important}
+  .b3{font-size:17px!important;line-height:28px!important}
+  .btn{width:100%;min-height:54px!important;font-size:17px!important}
+  .btn+.btn{margin-top:0}
+  main section:first-of-type img[style*="object-fit:cover"],main > section:first-child img{border-radius:18px}
+  /* 手機底部固定預約列 */
+  body{padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+  .tm-sticky{position:fixed;left:0;right:0;bottom:0;z-index:14;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.94);border-top:1px solid #E7E1D8;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);transform:translateY(110%);transition:transform .4s cubic-bezier(.22,1,.36,1)}
+  .tm-sticky.on{transform:none}
+  .tm-sticky a{flex:1;display:inline-flex;align-items:center;justify-content:center;min-height:50px;border-radius:14px;text-decoration:none;font-weight:800;font-size:16px}
+  .tm-sticky .p{background:var(--grad);color:#17303D;box-shadow:0 6px 18px rgba(240,122,46,.3)}
+  .tm-sticky .s{flex:0 0 auto;padding:0 16px;border:2px solid #1A2E3B;color:#1A2E3B;background:#fff}
+  .gaga{bottom:calc(80px + env(safe-area-inset-bottom))!important}
+}
+@media (min-width:641px){.tm-sticky{display:none}}
+@media (prefers-reduced-motion:reduce){.tm-sticky{transition:none}}
+
+/* ===== 視覺設計與動態體驗追加規範（2026-11-13）===== */
+/* 首頁首屏：淡入 + 分層出現（主 CTA 不延遲超過 .35s）*/
+.tm-hero > div > *{opacity:0;transform:translateY(18px);animation:tmIn .7s var(--ease) forwards}
+.tm-hero > div > :nth-child(1){animation-delay:.05s}.tm-hero > div > :nth-child(2){animation-delay:.15s}.tm-hero > div > :nth-child(3){animation-delay:.25s}.tm-hero > div > :nth-child(4){animation-delay:.32s}.tm-hero > div > :nth-child(5){animation-delay:.45s}
+.tm-hero > div:last-child > img,.tm-hero > div:last-child{animation:tmImg 1s var(--ease) forwards}
+.tm-hero .tm-px{will-change:transform}
+@keyframes tmIn{to{opacity:1;transform:none}}
+@keyframes tmImg{from{opacity:0;transform:scale(1.03)}to{opacity:1;transform:none}}
+/* 導覽列捲動後更實、有陰影 */
+.hd.tm-scrolled .nv{background:rgba(255,255,255,.96);box-shadow:0 6px 24px rgba(26,46,59,.08)}
+/* 按鈕三態 */
+.btn,.nv .cta,.opt,.slot,.day{transition:transform .5s var(--ease),background-color .3s var(--ease),box-shadow .3s var(--ease),border-color .3s var(--ease)!important}
+.btn:hover,.nv .cta:hover{transform:translateY(-2px)}
+.btn:active,.nv .cta:active{transform:scale(.97)!important;box-shadow:0 3px 10px rgba(240,122,46,.25)!important}
+.btn:focus-visible,.nv .cta:focus-visible,.opt:focus-visible,.slot:focus-visible,.day:focus-visible,.tm-thumb:focus-visible{outline:3px solid #1A2E3B!important;outline-offset:3px!important}
+/* 卡片 hover 上浮（商品、品牌、服務、練團室）*/
+.card,.brand,.prod,.room,.tier,.panel{transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+@media (hover:hover){
+  .card:hover,.brand:hover,.prod:hover,.room:hover,.tier:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(26,46,59,.12)}
+  .brand:hover .brand-img img,.prod:hover img{transform:scale(1.04)}
+}
+.brand-img,.prod{overflow:hidden}
+.brand-img img,.prod img{transition:transform 1.2s var(--ease)}
+/* 圖片載入淡入 */
+img.tm-fade{opacity:0;transition:opacity .6s var(--ease)}img.tm-fade.in{opacity:1}
+/* 區塊進場已由 site.js .rv 處理 */
+/* 商品頁 */
+.tm-gal{display:grid;grid-template-columns:1fr;gap:12px}
+.tm-main{position:relative;aspect-ratio:4/5;border-radius:24px;overflow:hidden;background:#F7F3EE;border:1px solid #E7E1D8;cursor:zoom-in}
+.tm-main img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .5s var(--ease),transform 1.2s var(--ease)}
+.tm-main img.on{opacity:1}
+.tm-main:hover img.on{transform:scale(1.03)}
+.tm-main .tm-zoom{position:absolute;right:14px;bottom:14px;background:rgba(255,255,255,.92);border:1px solid #E7E1D8;border-radius:999px;padding:8px 14px;font-size:13px;font-weight:700;color:#1A2E3B;display:inline-flex;gap:6px;align-items:center;pointer-events:none}
+.tm-thumbs{display:flex;gap:10px;overflow-x:auto;padding:2px;scrollbar-width:none}
+.tm-thumb{flex:0 0 84px;height:84px;border-radius:14px;overflow:hidden;border:2px solid transparent;padding:0;background:#F7F3EE;cursor:pointer}
+.tm-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.tm-thumb[aria-current="true"]{border-color:var(--orange)}
+.tm-spec{width:100%;border-collapse:collapse;font-size:15px}
+.tm-spec th,.tm-spec td{text-align:left;padding:12px 0;border-bottom:1px solid #E7E1D8;vertical-align:top}
+.tm-spec th{width:34%;font-weight:600;color:#4A5A65}
+.tm-todo{color:#B4521A;font-weight:600;font-size:13px;background:#FDF3EC;border-radius:6px;padding:2px 8px}
+/* 放大檢視（lightbox，支援拖曳與雙指縮放）*/
+.tm-lb{position:fixed;inset:0;z-index:40;background:rgba(14,26,34,.96);display:flex;flex-direction:column;opacity:0;visibility:hidden;transition:opacity .3s var(--ease),visibility .3s}
+.tm-lb.on{opacity:1;visibility:visible}
+.tm-lb-top{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;color:#fff;font-size:14px}
+.tm-lb-x{width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.1);color:#fff;font-size:22px;cursor:pointer}
+.tm-lb-stage{flex:1;overflow:hidden;touch-action:none;display:flex;align-items:center;justify-content:center;cursor:grab}
+.tm-lb-stage img{max-width:100%;max-height:100%;transform-origin:0 0;will-change:transform;user-select:none;-webkit-user-drag:none}
+.tm-lb-hint{text-align:center;color:rgba(255,255,255,.65);font-size:13px;padding:10px 16px calc(10px + env(safe-area-inset-bottom))}
+/* 預約頁 */
+.panel{border-radius:20px!important}
+.opt.on,.day.on{box-shadow:0 6px 18px rgba(240,122,46,.25)}
+.slot:hover{transform:translateY(-2px)}
+@media (prefers-reduced-motion:reduce){
+  .tm-hero > div > *,.tm-hero > div:last-child > img,.tm-hero > div:last-child{animation:none;opacity:1;transform:none}
+  .card,.brand,.prod,.room,.tier,.btn,.nv .cta,.brand-img img,.prod img,.tm-main img,img.tm-fade{transition:none!important;transform:none!important}
+  img.tm-fade{opacity:1}
+}
